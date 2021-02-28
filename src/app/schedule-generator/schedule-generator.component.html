@@ -1,0 +1,153 @@
+<div class="container pl-5 pr-5 pb-5 border">
+    <div class="row mt-4">
+        <div class="col">
+            Generador automatico de horarios
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="container border"></div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-3">
+            Preferencia Horaria
+        </div>
+        <div class="col-md-3">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Seleccione una opcion...</option>
+                <option value="1">Nocturna</option>
+                <option value="2">Diurna</option>
+              </select>
+          </div>
+          <div class="col-md-3">
+            Cantidad de materias: 
+          </div>
+          <div class="col-md-3">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Seleccione una opcion...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+                <option value="3">5</option>
+              </select>
+          </div>
+    </div> 
+    <div class="row mt-5">
+        <div class="col-md-12">
+            Selecciona una de las opciones de horario que mejor se ajuste a tus necesidades:
+        </div>
+    </div> 
+    <div class="row mt-5">
+        <div class="input-group">
+            <div class="input-group">
+              <div class="input-group-text">
+              <input type="radio" aria-label="Radio button for following text input">
+              &nbsp; Horario 1
+              </div>
+            </div>
+            <div class="container border mt-2 pr-5 pl-5">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Lunes</th>
+                        <th scope="col">Martes</th>
+                        <th scope="col">Miercoles</th>
+                        <th scope="col">Jueves</th>
+                        <th scope="col">Viernes</th>
+                        <th scope="col">Sabado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of ItemsArray">
+                        <td>{{ item.hora }}</td>
+                        <td>{{ item.Lunes }}</td>
+                        <td>{{ item.Martes }}</td>
+                        <td>{{ item.Miercoles }}</td>
+                        <td>{{ item.Jueves }}</td>
+                        <td>{{ item.Viernes }}</td>
+                        <td>{{ item.Sabado }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+
+          <div class="input-group mt-2">
+            <div class="input-group">
+              <div class="input-group-text">
+              <input type="radio" aria-label="Radio button for following text input">
+              &nbsp; Horario 2
+              </div>
+            </div>
+            <div class="container border mt-2 pr-5 pl-5">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Lunes</th>
+                        <th scope="col">Martes</th>
+                        <th scope="col">Miercoles</th>
+                        <th scope="col">Jueves</th>
+                        <th scope="col">Viernes</th>
+                        <th scope="col">Sabado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of ItemsArray">
+                        <td>{{ item.hora }}</td>
+                        <td>{{ item.Lunes }}</td>
+                        <td>{{ item.Martes }}</td>
+                        <td>{{ item.Miercoles }}</td>
+                        <td>{{ item.Jueves }}</td>
+                        <td>{{ item.Viernes }}</td>
+                        <td>{{ item.Sabado }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+          <div class="input-group mt-2">
+            <div class="input-group">
+              <div class="input-group-text">
+              <input type="radio" aria-label="Radio button for following text input">
+              &nbsp; Horario 2
+              </div>
+            </div>
+            <div class="container border mt-2 pr-5 pl-5">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Lunes</th>
+                        <th scope="col">Martes</th>
+                        <th scope="col">Miercoles</th>
+                        <th scope="col">Jueves</th>
+                        <th scope="col">Viernes</th>
+                        <th scope="col">Sabado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of ItemsArray">
+                        <td>{{ item.hora }}</td>
+                        <td>{{ item.Lunes }}</td>
+                        <td>{{ item.Martes }}</td>
+                        <td>{{ item.Miercoles }}</td>
+                        <td>{{ item.Jueves }}</td>
+                        <td>{{ item.Viernes }}</td>
+                        <td>{{ item.Sabado }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+    </div> 
+    <div class="row mt-5">
+        <div class="col-md-10">
+            
+        </div>
+        <div class="col-md-1">
+            <button type="button" class="btn btn-secondary">Secondary</button>
+        </div>
+    </div> 
+</div>
