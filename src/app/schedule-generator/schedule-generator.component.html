@@ -1,93 +1,129 @@
 <div class="container pl-5 pr-5 pb-5 border">
   <div class="row mt-4">
-      <div class="col">
-          Generador automatico de horarios
+    <div class="col">Generador automatico de horarios</div>
   </div>
-</div>
   <div class="row mt-4">
-      <div class="container border"></div>
-</div>
-  <div class="row mt-4">
-      <div class="col-md-3">
-          Preferencia Horaria
+    <div class="container border"></div>
   </div>
-      <div class="col-md-3">
-          <select class="form-select" aria-label="Default select example">
-              <option selected>Seleccione una opcion...</option> 
-              <option value="1">Nocturna</option>
-              <option value="2">Diurna</option>
-    </select>
+  <div class="row mt-2">
+    <div class="col-md-2">Preferencia Horaria</div>
+    <div class="col-md-4">
+      <select
+        formControlName="jornadasSelect"
+        class="form-control"
+        #jornadaSelect
+        (change)="jornadaSelected(jornadaSelect.value)"
+      >
+        <option>Seleccione la Jornada</option>
+        <option *ngFor="let jornada of jornadas">{{ jornada }}</option>
+      </select>
+    </div>
+    <div class="col-md-2">Cantidad de materias:</div>
+    <div class="col-md-4">
+      <select
+        formControlName="materiasSelect"
+        class="form-control"
+        #materiaSelect
+        (change)="materiaSelected(materiaSelect.value)"
+      >
+        <option>Seleccione las Materias</option>
+        <option *ngFor="let materia of materias">{{ materia }}</option>
+      </select>
+    </div>
   </div>
-  <div class="col-md-3">
-          Cantidad de materias: 
+  <div class="row mt-2">
+    <div class="col-md-2">Id Usuario</div>
+    <div class="col-md-3">
+      <input
+        formControlName="idEstudianteInp"
+        type="number"
+        class="form-control"
+        #idEstudianteIn
+        (change)="idEstudianteInput(idEstudianteIn.value)"
+      />
+    </div>
+    <div class="col-md-5"></div>
+    <div class="col-md-2">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="consultarEvent()"
+      >
+        Consultar
+      </button>
+    </div>
   </div>
-  <div class="col-md-3">
-          <select class="form-select" aria-label="Default select example">
-              <option selected>Seleccione una opcion...</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="3">4</option>
-              <option value="3">5</option>
-    </select>
-  </div>
-</div> 
-  <div class="row mt-5">
+  <div *ngIf="isEnabled">
+    <div class="row mt-5">
       <div class="col-md-12">
-          Selecciona una de las opciones de horario que mejor se ajuste a tus necesidades:
-  </div>
-</div> 
-  <div *ngFor="let horario of Horarios; let i = index" class="row mt-5">
-  <div class="input-group">
-          <div class="input-group">
-      <div class="input-group-text">
-        <input type="radio" aria-label="Radio button for following text input">
-        &nbsp; Horario: {{i + 1}}
+        Selecciona una de las opciones de horario que mejor se ajuste a tus
+        necesidades:
       </div>
     </div>
+    <div *ngFor="let horario of Horarios; let i = index" class="row mt-5">
+      <div class="input-group">
+        <div class="input-group">
+          <div class="input-group-text">
+            <input
+              type="radio"
+              aria-label="Radio button for following text input"
+            />
+            &nbsp; Horario: {{ i + 1 }}
+          </div>
+        </div>
 
-    <div class="container mt-2 pr-5 pl-5">
-      <table class="table border border-dark">
-          <thead>
-  <tr>
-    <th scope="col">Hora Inicio</th>
-    <th scope="col">Hora Fin</th>
-    <th scope="col">Lunes</th>
-    <th scope="col">Martes</th>
-    <th scope="col">Miercoles</th>
-    <th scope="col">Jueves</th>
-    <th scope="col">Viernes</th>
-    <th scope="col">Sabado</th>
-  </tr>
-</thead>
-          <tbody>
-  <tr *ngFor="let horarioGrupo of horario[0].lstGrupo[0].horarios">
-    <td>{{ horarioGrupo.hora_Inicio }}</td>
-    <td>{{ horarioGrupo.hora_Fin}}</td>
-    <td *ngIf="horarioGrupo.dia == 1">{{ horario[0].lstGrupo[0].descripcion }}</td>
-    <td></td>
-    <td *ngIf="horarioGrupo.dia == 2">{{ horario[0].lstGrupo[0].descripcion }}</td>
-    <td></td>
-    <td *ngIf="horarioGrupo.dia == 3">{{ horario[0].lstGrupo[0].descripcion }}</td>
-    <td></td>
-    <td *ngIf="horarioGrupo.dia == 4">{{ horario[0].lstGrupo[0].descripcion }}</td>
-    <td></td>
-    <td *ngIf="horarioGrupo.dia == 5">{{ horario[0].lstGrupo[0].descripcion }}</td>
-    <td></td>
-    <td *ngIf="horarioGrupo.dia == 6">{{ horario[0].lstGrupo[0].descripcion }}</td>
-  </tr>
-</tbody>
-</table>
-</div>
-          
-  </div>
-</div> 
-  <div class="row mt-5">
-      <div class="col-md-10">
-          
-  </div>
+        <div class="container mt-2 pr-5 pl-5">
+          <table class="table border border-dark">
+            <thead>
+              <tr>
+                <th scope="col">Hora Inicio</th>
+                <th scope="col">Hora Fin</th>
+                <th scope="col">Lunes</th>
+                <th scope="col">Martes</th>
+                <th scope="col">Miercoles</th>
+                <th scope="col">Jueves</th>
+                <th scope="col">Viernes</th>
+                <th scope="col">Sabado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let horarioGrupo of horario[0].lstGrupo[0].horarios">
+                <td>{{ horarioGrupo.hora_Inicio }}</td>
+                <td>{{ horarioGrupo.hora_Fin }}</td>
+                <td *ngIf="horarioGrupo.dia == 1">
+                  {{ horario[0].lstGrupo[0].descripcion }}
+                </td>
+                <td></td>
+                <td *ngIf="horarioGrupo.dia == 2">
+                  {{ horario[0].lstGrupo[0].descripcion }}
+                </td>
+                <td></td>
+                <td *ngIf="horarioGrupo.dia == 3">
+                  {{ horario[0].lstGrupo[0].descripcion }}
+                </td>
+                <td></td>
+                <td *ngIf="horarioGrupo.dia == 4">
+                  {{ horario[0].lstGrupo[0].descripcion }}
+                </td>
+                <td></td>
+                <td *ngIf="horarioGrupo.dia == 5">
+                  {{ horario[0].lstGrupo[0].descripcion }}
+                </td>
+                <td></td>
+                <td *ngIf="horarioGrupo.dia == 6">
+                  {{ horario[0].lstGrupo[0].descripcion }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-10"></div>
       <div class="col-md-1">
-          <button type="button" class="btn btn-secondary">Validar</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+      </div>
+    </div>
   </div>
-</div> 
 </div>

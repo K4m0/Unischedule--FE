@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AppSettings } from '../models/appSettings';
 
 @Component({
   selector: 'app-schedule-generator',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./schedule-generator.component.css']
 })
 export class ScheduleGeneratorComponent implements OnInit {
-
+  private URLEndpoint = AppSettings.API_ENDPOINT;
   Horarios = [
     [
       {
@@ -712,10 +714,51 @@ export class ScheduleGeneratorComponent implements OnInit {
   ]
   ;
 
-  constructor() { }
+  schedules=[];
+  selectedJornada:number = 0;
+  selectedMateria: number = 0;
+  idEstudiante: number = 0;
+  
+
+  jornadas: any = ['Nocturna', 'Diurna']
+  
+  materias: any = [1,2,3,4]
+
+  isEnabled = true;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    console.log(this.Horarios);
+    //console.log(this.Horarios);
+  }
+
+  jornadaSelected(value:string){
+    
+    this.selectedJornada = value == 'Nocturna' ? 1 : 2;
+    console.log(this.selectedJornada);
+}
+
+materiaSelected(value:string){
+  this.selectedMateria = Number(value);
+  console.log(this.selectedMateria);
+}
+  
+  idEstudianteInput(value: string) {
+    this.idEstudiante = Number(value);
+    console.log(this.idEstudiante);
+}
+  
+  getSchedules(): void{
+    this.http.get<any>(this.URLEndpoint + '?idEstudiante=' + this.idEstudiante + '&jornada=' + this.selectedJornada + '&canMateria=' + this.selectedMateria).subscribe(data => {
+      this.schedules = data;
+    })
+  }
+  
+  consultarEvent() {
+    if (this.selectedJornada !== 0 && this.selectedMateria !== 0) {
+      this.getSchedules();
+      this.isEnabled = this.schedules.length !== 0 ? true : false;
+    }
   }
 
 }
