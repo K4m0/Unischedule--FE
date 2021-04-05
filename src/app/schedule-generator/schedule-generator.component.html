@@ -1,6 +1,6 @@
 <div class="container pl-5 pr-5 pb-5 border">
   <div class="row mt-4">
-    <div class="col">Generador automatico de horarios</div>
+    <h2 class="col">Generador automatico de horarios</h2>
   </div>
   <div class="row mt-4">
     <div class="container border"></div>
@@ -44,11 +44,7 @@
     </div>
     <div class="col-md-5"></div>
     <div class="col-md-2">
-      <button
-        type="button"
-        class="btn btn-secondary"
-        (click)="consultarEvent()"
-      >
+      <button type="button" class="btn btn-info" (click)="consultarEvent()">
         Consultar
       </button>
     </div>
@@ -60,24 +56,28 @@
         necesidades:
       </div>
     </div>
-    <div *ngFor="let horario of Horarios; let i = index" class="row mt-5">
+    <div
+      *ngFor="let opcionHorario of Horarios2; let i = index"
+      class="row mt-5"
+    >
       <div class="input-group">
         <div class="input-group">
           <div class="input-group-text">
-            <input
-              type="radio"
-              aria-label="Radio button for following text input"
-            />
-            &nbsp; Horario: {{ i + 1 }}
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="validarHorario(i)"
+            >
+              Validar Horario: {{ i + 1 }}
+            </button>
           </div>
         </div>
 
         <div class="container mt-2 pr-5 pl-5">
-          <table class="table border border-dark">
+          <table class="table table-bordered table-striped">
             <thead>
               <tr>
-                <th scope="col">Hora Inicio</th>
-                <th scope="col">Hora Fin</th>
+                <th scope="col">Franja Horaria</th>
                 <th scope="col">Lunes</th>
                 <th scope="col">Martes</th>
                 <th scope="col">Miercoles</th>
@@ -86,43 +86,37 @@
                 <th scope="col">Sabado</th>
               </tr>
             </thead>
-            <tbody>
-              <tr *ngFor="let horarioGrupo of horario[0].lstGrupo[0].horarios">
-                <td>{{ horarioGrupo.hora_Inicio }}</td>
-                <td>{{ horarioGrupo.hora_Fin }}</td>
-                <td *ngIf="horarioGrupo.dia == 1">
-                  {{ horario[0].lstGrupo[0].descripcion }}
+            <tbody *ngFor="let franjaHoraria of opcionHorario">
+              <th>{{ franjaHoraria.franjaHoraria }}</th>
+              <tr *ngFor="let materia of franjaHoraria.materias">
+                <td></td>
+                <td *ngIf="materia.dia == 1">
+                  {{ materia.descripcion }}
                 </td>
                 <td></td>
-                <td *ngIf="horarioGrupo.dia == 2">
-                  {{ horario[0].lstGrupo[0].descripcion }}
+                <td *ngIf="materia.dia == 2">
+                  {{ materia.descripcion }}
                 </td>
                 <td></td>
-                <td *ngIf="horarioGrupo.dia == 3">
-                  {{ horario[0].lstGrupo[0].descripcion }}
+                <td *ngIf="materia.dia == 3">
+                  {{ materia.descripcion }}
                 </td>
                 <td></td>
-                <td *ngIf="horarioGrupo.dia == 4">
-                  {{ horario[0].lstGrupo[0].descripcion }}
+                <td *ngIf="materia.dia == 4">
+                  {{ materia.descripcion }}
                 </td>
                 <td></td>
-                <td *ngIf="horarioGrupo.dia == 5">
-                  {{ horario[0].lstGrupo[0].descripcion }}
+                <td *ngIf="materia.dia == 5">
+                  {{ materia.descripcion }}
                 </td>
                 <td></td>
-                <td *ngIf="horarioGrupo.dia == 6">
-                  {{ horario[0].lstGrupo[0].descripcion }}
+                <td *ngIf="materia.dia == 6">
+                  {{ materia.descripcion }}
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-      </div>
-    </div>
-    <div class="row mt-5">
-      <div class="col-md-10"></div>
-      <div class="col-md-1">
-        <button type="button" class="btn btn-secondary">Secondary</button>
       </div>
     </div>
   </div>

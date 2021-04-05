@@ -9,26 +9,15 @@ import { AppSettings } from '../models/appSettings';
 })
 export class ScheduleGeneratorComponent implements OnInit {
   private URLEndpoint = AppSettings.API_ENDPOINT;
-  Horarios = [
+  Horarios = 
+  [
     [
       {
         "id": 23,
-        "codigo": "45360012",
-        "nombre": "FISICA II",
-        "creditos": 3,
-        "horas": 4,
-        "topologia": "Indispensable",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 71,
-            "codigo": "2",
-            "descripcion": "GRUPO 2 - FÍSICA II",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
+        "horarios": [
               {
                 "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
                 "dia": 1,
                 "hora_Inicio": "18:00 ",
                 "hora_Fin": "20:00 ",
@@ -36,158 +25,20 @@ export class ScheduleGeneratorComponent implements OnInit {
               },
               {
                 "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
                 "dia": 3,
                 "hora_Inicio": "18:00 ",
                 "hora_Fin": "20:00 ",
                 "id_Grupo": 71
               }
-            ]
-          }
-        ]
+      ]
       },
       {
         "id": 31,
-        "codigo": "40050166",
-        "nombre": "INGENIERIA DE SOFTWARE",
-        "creditos": 3,
-        "horas": 5,
-        "topologia": "Indispensable",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 50,
-            "codigo": "2",
-            "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
-              {
-                "id": 34,
-                "dia": 4,
-                "hora_Inicio": "18:00",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              },
-              {
-                "id": 35,
-                "dia": 2,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              },
-              {
-                "id": 36,
-                "dia": 5,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": 32,
-        "codigo": "40050167       ",
-        "nombre": "PLANIFICACION Y GESTION DE REDES",
-        "creditos": 3,
-        "horas": 6,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 51,
-            "codigo": "1",
-            "descripcion": "GRUPO 1 - PLANIFICACIÓN Y GESTIÓN DE REDES",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
-              {
-                "id": 37,
-                "dia": 1,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              },
-              {
-                "id": 38,
-                "dia": 3,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              },
-              {
-                "id": 39,
-                "dia": 5,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    [
-      {
-        "id": 31,
-        "codigo": "40050166       ",
-        "nombre": "INGENIERIA DE SOFTWARE",
-        "creditos": 3,
-        "horas": 5,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 50,
-            "codigo": "2",
-            "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
-              {
-                "id": 34,
-                "dia": 4,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              },
-              {
-                "id": 35,
-                "dia": 2,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              },
-              {
-                "id": 36,
-                "dia": 5,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": 23,
-        "codigo": "45360012",
-        "nombre": "FISICA II",
-        "creditos": 3,
-        "horas": 4,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 71,
-            "codigo": "2",
-            "descripcion": "GRUPO 2 - FÍSICA II",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
+        "horarios": [
               {
                 "id": 29,
+          "descripcion": "GRUPO 1 - IA                  ",
                 "dia": 1,
                 "hora_Inicio": "18:00 ",
                 "hora_Fin": "20:00 ",
@@ -195,117 +46,20 @@ export class ScheduleGeneratorComponent implements OnInit {
               },
               {
                 "id": 30,
+          "descripcion": "GRUPO 1 - IA                  ",
                 "dia": 3,
                 "hora_Inicio": "18:00 ",
                 "hora_Fin": "20:00 ",
                 "id_Grupo": 71
               }
-            ]
-          }
-        ]
+      ]
       },
-      {
+    {
         "id": 32,
-        "codigo": "40050167",
-        "nombre": "PLANIFICACION Y GESTION DE REDES",
-        "creditos": 3,
-        "horas": 6,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 51,
-            "codigo": "1",
-            "descripcion": "GRUPO 1 - PLANIFICACIÓN Y GESTIÓN DE REDES",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
-              {
-                "id": 37,
-                "dia": 1,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              },
-              {
-                "id": 38,
-                "dia": 3,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              },
-              {
-                "id": 39,
-                "dia": 5,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    [
-      {
-        "id": 32,
-        "codigo": "40050167",
-        "nombre": "PLANIFICACION Y GESTION DE REDES",
-        "creditos": 3,
-        "horas": 6,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 51,
-            "codigo": "1",
-            "descripcion": "GRUPO 1 - PLANIFICACIÓN Y GESTIÓN DE REDES",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
-              {
-                "id": 37,
-                "dia": 1,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              },
-              {
-                "id": 38,
-                "dia": 3,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              },
-              {
-                "id": 39,
-                "dia": 5,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": 23,
-        "codigo": "45360012",
-        "nombre": "FISICA II",
-        "creditos": 3,
-        "horas": 4,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 71,
-            "codigo": "2",
-            "descripcion": "GRUPO 2 - FÍSICA II",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
+        "horarios": [
               {
                 "id": 29,
+          "descripcion": "GRUPO 3 - COMPUTACION GRAFICA                  ",
                 "dia": 1,
                 "hora_Inicio": "18:00 ",
                 "hora_Fin": "20:00 ",
@@ -313,110 +67,22 @@ export class ScheduleGeneratorComponent implements OnInit {
               },
               {
                 "id": 30,
+          "descripcion": "GRUPO 3 - COMPUTACION GRAFICA                  ",
                 "dia": 3,
                 "hora_Inicio": "18:00 ",
                 "hora_Fin": "20:00 ",
                 "id_Grupo": 71
               }
-            ]
-          }
-        ]
-      },
-      {
-        "id": 31,
-        "codigo": "40050166",
-        "nombre": "INGENIERIA DE SOFTWARE",
-        "creditos": 3,
-        "horas": 5,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 50,
-            "codigo": "2",
-            "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
-              {
-                "id": 34,
-                "dia": 4,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              },
-              {
-                "id": 35,
-                "dia": 2,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              },
-              {
-                "id": 36,
-                "dia": 5,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              }
-            ]
-          }
-        ]
+      ]
       }
     ],
     [
       {
-        "id": 37,
-        "codigo": "40050171",
-        "nombre": "PRACTICA INGENIERIA IV",
-        "creditos": 3,
-        "horas": 4,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 56,
-            "codigo": "1",
-            "descripcion": "GRUPO 1 - PRÁCTICA DE INGENIERÍA DE SISTEMAS IV",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
-              {
-                "id": 40,
-                "dia": 2,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 56
-              },
-              {
-                "id": 41,
-                "dia": 5,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 56
-              }
-            ]
-          }
-        ]
-      },
-      {
         "id": 23,
-        "codigo": "45360012",
-        "nombre": "FISICA II",
-        "creditos": 3,
-        "horas": 4,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 71,
-            "codigo": "2",
-            "descripcion": "GRUPO 2 - FÍSICA II",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
+        "horarios": [
               {
                 "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
                 "dia": 1,
                 "hora_Inicio": "18:00 ",
                 "hora_Fin": "20:00 ",
@@ -424,110 +90,20 @@ export class ScheduleGeneratorComponent implements OnInit {
               },
               {
                 "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
                 "dia": 3,
                 "hora_Inicio": "18:00 ",
                 "hora_Fin": "20:00 ",
                 "id_Grupo": 71
               }
-            ]
-          }
-        ]
+      ]
       },
       {
-        "id": 32,
-        "codigo": "40050167",
-        "nombre": "PLANIFICACION Y GESTION DE REDES",
-        "creditos": 3,
-        "horas": 6,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 51,
-            "codigo": "1",
-            "descripcion": "GRUPO 1 - PLANIFICACIÓN Y GESTIÓN DE REDES",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
-              {
-                "id": 37,
-                "dia": 1,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              },
-              {
-                "id": 38,
-                "dia": 3,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              },
-              {
-                "id": 39,
-                "dia": 5,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    [
-      {
-        "id": 38,
-        "codigo": "40050168",
-        "nombre": "INTELIGENCIA ARTIFICIAL",
-        "creditos": 3,
-        "horas": 4,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 52,
-            "codigo": "1",
-            "descripcion": "GRUPO 1 - INTELIGENCIA ARTIFICIAL",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
-              {
-                "id": 42,
-                "dia": 3,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 52
-              },
-              {
-                "id": 43,
-                "dia": 6,
-                "hora_Inicio": "09:00 ",
-                "hora_Fin": "11:00 ",
-                "id_Grupo": 52
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": 23,
-        "codigo": "45360012",
-        "nombre": "FISICA II",
-        "creditos": 3,
-        "horas": 4,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 71,
-            "codigo": "2",
-            "descripcion": "GRUPO 2 - FÍSICA II",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
+        "id": 31,
+        "horarios": [
               {
                 "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
                 "dia": 1,
                 "hora_Inicio": "18:00 ",
                 "hora_Fin": "20:00 ",
@@ -535,186 +111,342 @@ export class ScheduleGeneratorComponent implements OnInit {
               },
               {
                 "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
                 "dia": 3,
                 "hora_Inicio": "18:00 ",
                 "hora_Fin": "20:00 ",
                 "id_Grupo": 71
               }
-            ]
-          }
-        ]
+      ]
+      },
+    {
+        "id": 32,
+        "horarios": [
+              {
+                "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 1,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              },
+              {
+                "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 3,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              }
+      ]
+      }
+    ],
+    [
+      {
+        "id": 23,
+        "horarios": [
+              {
+                "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 1,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              },
+              {
+                "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 3,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              }
+      ]
       },
       {
         "id": 31,
-        "codigo": "40050166",
-        "nombre": "INGENIERIA DE SOFTWARE",
-        "creditos": 3,
-        "horas": 5,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
-          {
-            "id": 50,
-            "codigo": "2",
-            "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
+        "horarios": [
               {
-                "id": 34,
-                "dia": 4,
+                "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 1,
                 "hora_Inicio": "18:00 ",
                 "hora_Fin": "20:00 ",
-                "id_Grupo": 50
+                "id_Grupo": 71
               },
               {
-                "id": 35,
-                "dia": 2,
+                "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 3,
                 "hora_Inicio": "18:00 ",
                 "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              },
-              {
-                "id": 36,
-                "dia": 5,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
+                "id_Grupo": 71
               }
-            ]
+      ]
+      },
+    {
+        "id": 32,
+        "horarios": [
+              {
+                "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 1,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              },
+              {
+                "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 3,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              }
+      ]
+      }
+    ],
+    [
+      {
+        "id": 23,
+        "horarios": [
+              {
+                "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 1,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              },
+              {
+                "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 3,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              }
+      ]
+      },
+      {
+        "id": 31,
+        "horarios": [
+              {
+                "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 1,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              },
+              {
+                "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 3,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              }
+      ]
+      },
+    {
+        "id": 32,
+        "horarios": [
+              {
+                "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 1,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              },
+              {
+                "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 3,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              }
+      ]
+      }
+    ],
+    [
+      {
+        "id": 23,
+        "horarios": [
+              {
+                "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 1,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              },
+              {
+                "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 3,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              }
+      ]
+      },
+      {
+        "id": 31,
+        "horarios": [
+              {
+                "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 1,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              },
+              {
+                "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 3,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              }
+      ]
+      },
+    {
+        "id": 32,
+        "horarios": [
+              {
+                "id": 29,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 1,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              },
+              {
+                "id": 30,
+          "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE                  ",
+                "dia": 3,
+                "hora_Inicio": "18:00 ",
+                "hora_Fin": "20:00 ",
+                "id_Grupo": 71
+              }
+      ]
+      }
+    ]
+  ]
+    ;
+  
+  Horarios2 = [
+    [
+      {
+        "franjaHoraria": "18:00-20:00",
+        "materias": [
+          {
+            "idGrupo": 71,
+            "descripcion": "GRUPO 2 - FÍSICA II",
+            "dia": 1
+          },
+          {
+            "idGrupo": 71,
+            "descripcion": "GRUPO 2 - FÍSICA II",
+            "dia": 3
+          },
+          {
+            "idGrupo": 50,
+            "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE",
+            "dia": 2
+          },
+          {
+            "idGrupo": 50,
+            "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE",
+            "dia": 4
+          },
+          {
+            "idGrupo": 50,
+            "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE",
+            "dia": 5
+          },
+        ]
+      },
+      {
+        "franjaHoraria": "20:00-22:00",
+        "materias": [
+          {
+            "idGrupo": 51,
+            "descripcion": "GRUPO 1 - PLANIFICACIÓN Y GESTIÓN DE REDES",
+            "dia": 1
+          },
+          {
+            "idGrupo": 51,
+            "descripcion": "GRUPO 1 - PLANIFICACIÓN Y GESTIÓN DE REDES",
+            "dia": 3
+          },
+          {
+            "idGrupo": 51,
+            "descripcion": "GRUPO 1 - PLANIFICACIÓN Y GESTIÓN DE REDES",
+            "dia": 5
           }
         ]
       }
     ],
     [
       {
-        "id": 40,
-        "codigo": "40050173",
-        "nombre": "COMPUTACION GRAFICA",
-        "creditos": 3,
-        "horas": 5,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
+        "franjaHoraria": "18:00-20:00",
+        "materias": [
           {
-            "id": 58,
-            "codigo": "1",
-            "descripcion": "GRUPO 1 - COMPUTACIÓN GRÁFICA",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
-              {
-                "id": 44,
-                "dia": 1,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 58
-              },
-              {
-                "id": 45,
-                "dia": 3,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 58
-              },
-              {
-                "id": 46,
-                "dia": 5,
-                "hora_Inicio": "21:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 58
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": 31,
-        "codigo": "40050166",
-        "nombre": "INGENIERIA DE SOFTWARE",
-        "creditos": 3,
-        "horas": 5,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
+            "idGrupo": 71,
+            "descripcion": "GRUPO 2 - FÍSICA II",
+            "dia": 1
+          },
           {
-            "id": 50,
-            "codigo": "2",
+            "idGrupo": 71,
+            "descripcion": "GRUPO 2 - FÍSICA II",
+            "dia": 3
+          },
+          {
+            "idGrupo": 50,
             "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
-              {
-                "id": 34,
-                "dia": 4,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              },
-              {
-                "id": 35,
-                "dia": 2,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              },
-              {
-                "id": 36,
-                "dia": 5,
-                "hora_Inicio": "18:00 ",
-                "hora_Fin": "20:00 ",
-                "id_Grupo": 50
-              }
-            ]
-          }
+            "dia": 2
+          },
+          {
+            "idGrupo": 50,
+            "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE",
+            "dia": 4
+          },
+          {
+            "idGrupo": 50,
+            "descripcion": "GRUPO 2 - INGENIERÍA DE SOFTWARE",
+            "dia": 5
+          },
         ]
       },
       {
-        "id": 32,
-        "codigo": "40050167",
-        "nombre": "PLANIFICACION Y GESTION DE REDES",
-        "creditos": 3,
-        "horas": 6,
-        "topologia": "Indispensable  ",
-        "planEstudio": 1,
-        "lstGrupo": [
+        "franjaHoraria": "20:00-22:00",
+        "materias": [
           {
-            "id": 51,
-            "codigo": "1",
+            "idGrupo": 51,
             "descripcion": "GRUPO 1 - PLANIFICACIÓN Y GESTIÓN DE REDES",
-            "capacidad": 15,
-            "id_Asignatura": null,
-            "horarios": [
-              {
-                "id": 37,
-                "dia": 1,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              },
-              {
-                "id": 38,
-                "dia": 3,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              },
-              {
-                "id": 39,
-                "dia": 5,
-                "hora_Inicio": "20:00 ",
-                "hora_Fin": "22:00 ",
-                "id_Grupo": 51
-              }
-            ]
+            "dia": 1
+          },
+          {
+            "idGrupo": 51,
+            "descripcion": "GRUPO 1 - PLANIFICACIÓN Y GESTIÓN DE REDES",
+            "dia": 3
+          },
+          {
+            "idGrupo": 51,
+            "descripcion": "GRUPO 1 - PLANIFICACIÓN Y GESTIÓN DE REDES",
+            "dia": 5
           }
         ]
       }
     ]
   ]
-  ;
 
-  schedules=[];
+  schedules:any={};
   selectedJornada:number = 0;
   selectedMateria: number = 0;
   idEstudiante: number = 0;
@@ -724,12 +456,12 @@ export class ScheduleGeneratorComponent implements OnInit {
   
   materias: any = [1,2,3,4]
 
-  isEnabled = true;
+  isEnabled = false;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    //console.log(this.Horarios);
+    //console.log(this.Horarios2);
   }
 
   jornadaSelected(value:string){
@@ -749,16 +481,21 @@ materiaSelected(value:string){
 }
   
   getSchedules(): void{
-    this.http.get<any>(this.URLEndpoint + '?idEstudiante=' + this.idEstudiante + '&jornada=' + this.selectedJornada + '&canMateria=' + this.selectedMateria).subscribe(data => {
+    this.schedules = this.Horarios2;
+    /*this.http.get<any>(this.URLEndpoint + '?idEstudiante=' + this.idEstudiante + '&jornada=' + this.selectedJornada + '&canMateria=' + this.selectedMateria).subscribe(data => {
       this.schedules = data;
-    })
+    })*/
   }
   
   consultarEvent() {
-    if (this.selectedJornada !== 0 && this.selectedMateria !== 0) {
+    if (this.selectedJornada !== 0 && this.selectedMateria !== 0 && this.idEstudiante) {
       this.getSchedules();
-      this.isEnabled = this.schedules.length !== 0 ? true : false;
+      this.isEnabled = !this.schedules ? false : true;
     }
+  }
+
+  validarHorario(opcionHorario:number) {
+    console.log(this.schedules[opcionHorario])
   }
 
 }
