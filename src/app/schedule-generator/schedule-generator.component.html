@@ -56,10 +56,7 @@
         necesidades:
       </div>
     </div>
-    <div
-      *ngFor="let opcionHorario of Horarios2; let i = index"
-      class="row mt-5"
-    >
+    <div *ngFor="let opcionHorario of Horarios; let i = index" class="row mt-5">
       <div class="input-group">
         <div class="input-group">
           <div class="input-group-text">
@@ -77,7 +74,7 @@
           <table class="table table-bordered table-striped">
             <thead>
               <tr>
-                <th scope="col">Franja Horaria</th>
+                <th scope="col">Hora</th>
                 <th scope="col">Lunes</th>
                 <th scope="col">Martes</th>
                 <th scope="col">Miercoles</th>
@@ -86,33 +83,15 @@
                 <th scope="col">Sabado</th>
               </tr>
             </thead>
-            <tbody *ngFor="let franjaHoraria of opcionHorario">
-              <th>{{ franjaHoraria.franjaHoraria }}</th>
-              <tr *ngFor="let materia of franjaHoraria.materias">
-                <td></td>
-                <td *ngIf="materia.dia == 1">
-                  {{ materia.descripcion }}
-                </td>
-                <td></td>
-                <td *ngIf="materia.dia == 2">
-                  {{ materia.descripcion }}
-                </td>
-                <td></td>
-                <td *ngIf="materia.dia == 3">
-                  {{ materia.descripcion }}
-                </td>
-                <td></td>
-                <td *ngIf="materia.dia == 4">
-                  {{ materia.descripcion }}
-                </td>
-                <td></td>
-                <td *ngIf="materia.dia == 5">
-                  {{ materia.descripcion }}
-                </td>
-                <td></td>
-                <td *ngIf="materia.dia == 6">
-                  {{ materia.descripcion }}
-                </td>
+            <tbody>
+              <tr *ngFor="let materia of opcionHorario.content">
+                <td>{{ materia.hora }}</td>
+                <td>{{ materia.Lunes }}</td>
+                <td>{{ materia.Martes }}</td>
+                <td>{{ materia.Miercoles }}</td>
+                <td>{{ materia.Jueves }}</td>
+                <td>{{ materia.Viernes }}</td>
+                <td>{{ materia.Sabado }}</td>
               </tr>
             </tbody>
           </table>

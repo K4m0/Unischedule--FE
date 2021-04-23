@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 import { ScheduleGeneratorComponent } from './schedule-generator/schedule-generator.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/index', pathMatch: 'full' },
-  { path: 'index', component: ScheduleGeneratorComponent }
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: "login", component: LoginComponent, pathMatch: "full" },
+  { path: 'home', component: ScheduleGeneratorComponent }
 ];
 
 @NgModule({
