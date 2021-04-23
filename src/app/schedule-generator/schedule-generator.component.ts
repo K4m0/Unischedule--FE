@@ -113,7 +113,7 @@ export class ScheduleGeneratorComponent implements OnInit {
   
   materias: any = [1,2,3,4]
 
-  isEnabled = true;
+  isEnabled = false;
 
   constructor(private http: HttpClient) { }
 
