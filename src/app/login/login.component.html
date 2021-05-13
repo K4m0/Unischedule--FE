@@ -3,7 +3,7 @@
     <h1>Login</h1>
     <!-- Email input -->
     <div class="form-outline mb-4">
-      <input type="email" id="email" class="form-control" #email />
+      <input type="text" id="email" class="form-control" #email />
       <label class="form-label" for="email">Email address</label>
     </div>
 
@@ -17,7 +17,7 @@
     <button
       type="submit"
       class="btn btn-primary btn-block"
-      (click)="login(email.value, password.value)"
+      (click)="login($event, email.value, password.value)"
     >
       Sign in
     </button>

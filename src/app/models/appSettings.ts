@@ -1,3 +1,3 @@
 export class AppSettings {
-    public static API_ENDPOINT = 'http://localhost:8090/GeneradorHorario/AsignaturasEstud/';
+    public static API_ENDPOINT = 'https://generarhorario.herokuapp.com/GeneradorHorario/';
  }
