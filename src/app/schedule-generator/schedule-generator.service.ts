@@ -19,7 +19,8 @@ export class ScheduleGeneratorService {
 
   getSchedules(idEstudiante: number, jornada: number): Observable<Schedule>{
 
-    return this.http.get<Schedule>(this.URLEndpoint + 'HorarioXEstudiante/?canMateria=' + 1 + '&idEstudiante=' + idEstudiante + '&jornada=' + jornada).pipe( 
+    return this.http.get<Schedule>(this.URLEndpoint + 'HorarioXEstudiante/?canMateria=' + 1 + '&idEstudiante=' + idEstudiante + '&jornada=' + jornada)
+      .pipe(
       tap(data =>  
         console.log('All: ' + JSON.stringify(data)))
     );

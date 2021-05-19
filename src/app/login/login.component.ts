@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../models/user';
 import { LoginService } from './login.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login',
@@ -25,13 +26,37 @@ export class LoginComponent implements OnInit {
       data => {
         if (data)
         {
+          Swal.fire({
+
+            title: 'Bien Hecho!',
+            text: 'Inicio de sesion exitoso',
+            icon: 'success',
+            confirmButtonColor: '#3085d6'
+          }
+           
+          )
           this.router.navigate(['/home'],{queryParams: {userId: data.id}});
         }
         else
         {
           
-          }
+        }
+        
+        
           
+      },
+      error => {
+        console.log(error);
+
+        Swal.fire({
+
+          title: 'Oops...',
+          text: 'Credenciales Incorrectas',
+          icon: 'error',
+          confirmButtonColor: '#3085d6'
+        }
+         
+        )
       }
     );
 
