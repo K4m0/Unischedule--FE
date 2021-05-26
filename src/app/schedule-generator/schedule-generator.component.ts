@@ -40,7 +40,7 @@ export class ScheduleGeneratorComponent implements OnInit {
 
   jornadaSelected(value:string){
     
-    this.selectedJornada = value == 'Nocturna' ? 1 : 2;
+    this.selectedJornada = value == 'Nocturna' ? 2: 1;
     console.log(this.selectedJornada);
 }
 
